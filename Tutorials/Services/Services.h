@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Services : NSObject
+//block syntax
+typedef void(^onComplete)(NSArray * __nullable dataArray, NSString * __nullable errMessage);
 
+@interface Services : NSObject
++(id) instance;
+-(void)getTutorials:(nullable onComplete)completionHandler;
 @end

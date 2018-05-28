@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
-@interface VideoVC : ViewController
-
+@class Video;
+@interface VideoVC : ViewController <UIWebViewDelegate>
+@property (nonatomic, strong) Video *video;
 @end
